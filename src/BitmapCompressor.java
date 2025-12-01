@@ -23,7 +23,7 @@
  *  @author Robert Sedgewick
  *  @author Kevin Wayne
  *  @author Zach Blick
- *  @author YOUR NAME HERE
+ *  @author David Lutch
  */
 public class BitmapCompressor {
 
@@ -32,8 +32,8 @@ public class BitmapCompressor {
      * and writes the results to standard output.
      */
     public static void compress() {
-
         // TODO: complete compress()
+        String reader = BinaryStdIn.readString();
 
         BinaryStdOut.close();
     }
