@@ -72,10 +72,39 @@
       <workItem from="1764567474265" duration="317000" />
       <workItem from="1764567803375" duration="66000" />
       <workItem from="1764567882745" duration="29000" />
+      <workItem from="1764567940094" duration="99000" />
+      <workItem from="1764610229816" duration="488000" />
+      <workItem from="1764611075194" duration="13000" />
+      <workItem from="1764611144164" duration="37000" />
+      <workItem from="1764611183206" duration="121000" />
+      <workItem from="1764611314504" duration="75000" />
+      <workItem from="1764611437070" duration="115000" />
+      <workItem from="1764611601061" duration="6000" />
+      <workItem from="1764611700138" duration="76000" />
+      <workItem from="1764611777967" duration="80000" />
+      <workItem from="1764618305203" duration="162000" />
+      <workItem from="1764635177451" duration="765000" />
+      <workItem from="1764644522948" duration="459000" />
+      <workItem from="1764647256670" duration="169000" />
+      <workItem from="1764647434092" duration="210000" />
+      <workItem from="1764647650473" duration="1869000" />
     </task>
+    <task id="LOCAL-00001" summary="Created project on github">
+      <option name="closed" value="true" />
+      <created>1764568029580</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764568029580</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created project on github" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created project on github" />
   </component>
 </project>

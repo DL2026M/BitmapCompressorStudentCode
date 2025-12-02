@@ -29,24 +29,46 @@ public class BitmapCompressor {
 
     /**
      * Reads a sequence of bits from standard input, compresses them,
-     * and writes the results to standard output.
+     * and wr ites the results to standard output.
      */
     public static void compress() {
         // TODO: complete compress()
-        String reader = BinaryStdIn.readString();
-
+        int tracker = 0;
+        int counter;
+        Integer reader = BinaryStdIn.readInt(8);
+        while (!BinaryStdIn.isEmpty()) {
+            if (BinaryStdIn.readInt(1) == BinaryStdIn.readInt(2)) {
+                tracker++;
+            }
+            if (tracker == 255) {
+                BinaryStdOut.write(tracker, 8);
+                BinaryStdOut.write(0, 8);
+                tracker = 0;
+            if (BinaryStdIn.readInt(1) != BinaryStdIn.readInt(2)) {
+                    BinaryStdOut.write(tracker, 8);
+                }
+            }
+        }
         BinaryStdOut.close();
     }
 
     /**
-     * Reads a sequence of bits from standard input, decodes it,
+     * Reads a sequence of bits from standard
+        } input, decodes it,
      * and writes the results to standard output.
      */
     public static void expand() {
-
         // TODO: complete expand()
+        while (!BinaryStdIn.isEmpty()) {
+            Integer run = BinaryStdIn.readInt(8);
+            if (BinaryStdIn.readInt() == BinaryStdIn.readInt(2)) {
+                BinaryStdOut.write(BinaryStdIn.readInt(64), 8);
+            }
 
+
+        }
         BinaryStdOut.close();
+
     }
 
     /**
