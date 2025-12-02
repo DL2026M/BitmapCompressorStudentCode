@@ -56,17 +56,23 @@ public class BitmapCompressor {
      * Reads a sequence of bits from standard
         } input, decodes it,
      * and writes the results to standard output.
-     */
+     */// TODO: complete expand()
     public static void expand() {
-        // TODO: complete expand()
+        boolean bitTracker = false;
+
         while (!BinaryStdIn.isEmpty()) {
             Integer run = BinaryStdIn.readInt(8);
-            if (BinaryStdIn.readInt() == BinaryStdIn.readInt(2)) {
-                BinaryStdOut.write(BinaryStdIn.readInt(64), 8);
+            for (int i = 1; i <= run; i++) {
+                if (bitTracker) {
+                    BinaryStdOut.write(0);
+                }
+                else {
+                    BinaryStdOut.write(1);
+                    }
+                }
             }
-
-
-        }
+        // Flips for the next run
+        bitTracker = !bitTracker;
         BinaryStdOut.close();
 
     }
