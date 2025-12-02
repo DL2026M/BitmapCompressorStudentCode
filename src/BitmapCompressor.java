@@ -33,22 +33,25 @@ public class BitmapCompressor {
      */
     public static void compress() {
         // TODO: complete compress()
-        int tracker = 0;
-        int counter;
-        Integer reader = BinaryStdIn.readInt(8);
+        int tracker = 1;
+        int oldBit = BinaryStdIn.readInt(1);
+
         while (!BinaryStdIn.isEmpty()) {
-            if (BinaryStdIn.readInt(1) == BinaryStdIn.readInt(2)) {
+            int currentBit = BinaryStdIn.readInt(1);
+            if (currentBit == oldBit) {
                 tracker++;
             }
             if (tracker == 255) {
                 BinaryStdOut.write(tracker, 8);
                 BinaryStdOut.write(0, 8);
-                tracker = 0;
-            if (BinaryStdIn.readInt(1) != BinaryStdIn.readInt(2)) {
+                tracker = 1;
+            }
+            else {
                     BinaryStdOut.write(tracker, 8);
+                    oldBit = currentBit;
+                    tracker = 1;
                 }
             }
-        }
         BinaryStdOut.close();
     }
 
@@ -58,23 +61,22 @@ public class BitmapCompressor {
      * and writes the results to standard output.
      */// TODO: complete expand()
     public static void expand() {
-        boolean bitTracker = false;
+        boolean Zero = true;
 
         while (!BinaryStdIn.isEmpty()) {
-            Integer run = BinaryStdIn.readInt(8);
+            int run = BinaryStdIn.readInt(8);
             for (int i = 1; i <= run; i++) {
-                if (bitTracker) {
+                if (Zero) {
                     BinaryStdOut.write(0);
                 }
                 else {
                     BinaryStdOut.write(1);
                     }
                 }
+            Zero = !Zero;
             }
         // Flips for the next run
-        bitTracker = !bitTracker;
         BinaryStdOut.close();
-
     }
 
     /**
