@@ -40,18 +40,19 @@ public class BitmapCompressor {
             int currentBit = BinaryStdIn.readInt(1);
             if (currentBit == oldBit) {
                 tracker++;
-            }
-            if (tracker == 255) {
-                BinaryStdOut.write(tracker, 8);
-                BinaryStdOut.write(0, 8);
-                tracker = 1;
-            }
-            else {
-                    BinaryStdOut.write(tracker, 8);
-                    oldBit = currentBit;
+                if (tracker == 256) {
+                    BinaryStdOut.write(tracker - 1, 8);
+                    BinaryStdOut.write(0, 8);
                     tracker = 1;
                 }
             }
+            if (currentBit != oldBit) {
+                BinaryStdOut.write(tracker, 8);
+                oldBit = currentBit;
+                tracker = 1;
+            }
+        }
+        BinaryStdOut.write(tracker, 8);
         BinaryStdOut.close();
     }
 
@@ -67,10 +68,10 @@ public class BitmapCompressor {
             int run = BinaryStdIn.readInt(8);
             for (int i = 1; i <= run; i++) {
                 if (Zero) {
-                    BinaryStdOut.write(0);
+                    BinaryStdOut.write(0, 1);
                 }
                 else {
-                    BinaryStdOut.write(1);
+                    BinaryStdOut.write(1, 1);
                     }
                 }
             Zero = !Zero;
