@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5344144c-2391-49b9-ba87-481b14af2cb8" name="Changes" comment="Tutorial time working">
+    <list default="true" id="5344144c-2391-49b9-ba87-481b14af2cb8" name="Changes" comment="Class time work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WORK_LOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/WORK_LOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BitmapCompressor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BitmapCompressor.java" afterDir="false" />
@@ -97,7 +97,8 @@
       <workItem from="1764650931232" duration="2000" />
       <workItem from="1764698604960" duration="3840000" />
       <workItem from="1764710268650" duration="23000" />
-      <workItem from="1764715670900" duration="903000" />
+      <workItem from="1764715670900" duration="1069000" />
+      <workItem from="1764721828315" duration="337000" />
     </task>
     <task id="LOCAL-00001" summary="Created project on github">
       <option name="closed" value="true" />
@@ -131,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764700867911</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Class time work">
+      <option name="closed" value="true" />
+      <created>1764716604543</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764716604543</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +151,7 @@
     <MESSAGE value="Temp commit because my intelliJ keeps on crashing" />
     <MESSAGE value="First draft, not working but complete" />
     <MESSAGE value="Tutorial time working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tutorial time working" />
+    <MESSAGE value="Class time work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Class time work" />
   </component>
 </project>

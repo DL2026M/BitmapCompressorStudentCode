@@ -29,23 +29,23 @@ public class BitmapCompressor {
 
     /**
      * Reads a sequence of bits from standard input, compresses them,
-     * and wr ites the results to standard output.
+     * and writes the results to standard output.
      */
     public static void compress() {
-        // TODO: complete compress()
         int tracker = 1;
         int oldBit = BinaryStdIn.readInt(1);
-
         while (!BinaryStdIn.isEmpty()) {
             int currentBit = BinaryStdIn.readInt(1);
             if (currentBit == oldBit) {
                 tracker++;
+                // Writes out 255 and resets tracker to 1 only if there are 256 1's or 0's in a row
                 if (tracker == 256) {
                     BinaryStdOut.write(tracker - 1, 8);
                     BinaryStdOut.write(0, 8);
                     tracker = 1;
                 }
             }
+            // Flips the digit that is being tracked and resets the tracker
             if (currentBit != oldBit) {
                 BinaryStdOut.write(tracker, 8);
                 oldBit = currentBit;
@@ -60,7 +60,7 @@ public class BitmapCompressor {
      * Reads a sequence of bits from standard
         } input, decodes it,
      * and writes the results to standard output.
-     */// TODO: complete expand()
+     */
     public static void expand() {
         boolean Zero = true;
 
@@ -68,6 +68,7 @@ public class BitmapCompressor {
             int run = BinaryStdIn.readInt(8);
             for (int i = 1; i <= run; i++) {
                 if (Zero) {
+                    // Writes out a 0 only using 1 bit
                     BinaryStdOut.write(0, 1);
                 }
                 else {
